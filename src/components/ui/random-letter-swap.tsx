@@ -106,7 +106,7 @@ export function RandomLetterSwapForward({
         return (
           <span className="whitespace-pre relative flex" key={i}>
             <motion.span
-              className={`relative pb-2 letter-${i}`}
+              className={`relative letter-${i}`}
               style={{ top: 0 }}
             >
               {letter}
@@ -220,7 +220,7 @@ export function RandomLetterSwapPingPong({
         return (
           <span className="whitespace-pre relative flex" key={i}>
             <motion.span
-              className={`relative pb-2 letter-${i}`}
+              className={`relative letter-${i}`}
               style={{ top: 0 }}
             >
               {letter}

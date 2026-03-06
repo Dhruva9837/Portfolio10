@@ -38,16 +38,16 @@ export default function Hero() {
 
         <h1 
           ref={headlineRef}
-          className="font-display font-medium leading-none tracking-[-0.04em] mb-12"
-          style={{ fontSize: 'clamp(3.5rem, 12vw, 9rem)' }}
+          className="font-display font-medium leading-[1.1] tracking-[-0.04em] mb-12"
+          style={{ fontSize: 'clamp(2.5rem, 8vw, 7rem)' }}
         >
-          <div className="overflow-hidden mb-2 py-1">
-            <span className="reveal-text inline-block translate-y-full">
+          <div className="overflow-hidden mb-2 py-2">
+            <span className="reveal-text inline-block translate-y-full px-4">
               <RandomLetterSwapForward label="D H R U V A" />
             </span>
           </div>
-          <div className="overflow-hidden py-1">
-            <span className="reveal-text inline-block translate-y-full text-accent underline decoration-1 underline-offset-[12px]">
+          <div className="overflow-hidden py-2">
+            <span className="reveal-text inline-block translate-y-full text-accent underline decoration-1 underline-offset-[12px] px-4">
               <RandomLetterSwapForward label="MERN DEVELOPER." />
             </span>
           </div>
