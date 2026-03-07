@@ -5,7 +5,6 @@ export default function About() {
     <section id="about" className="py-32 px-6 bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-12 gap-16 md:gap-24 items-start">
-          {/* Label and Big Heading */}
           <div className="md:col-span-12 lg:col-span-5">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -23,7 +22,6 @@ export default function About() {
             </motion.div>
           </div>
 
-          {/* Detailed Description and Tech Stack */}
           <div className="md:col-span-12 lg:col-span-7">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -49,12 +47,12 @@ export default function About() {
                 <div>
                   <h3 className="font-display text-sm font-medium tracking-tight mb-4 uppercase">Technologies</h3>
                   <ul className="grid grid-cols-2 gap-y-2 font-mono text-[11px] text-accent/80 tracking-wider">
-                    <li>React / Next.js</li>
+                    <li>React / Vite</li>
                     <li>TypeScript</li>
                     <li>Framer Motion</li>
-                    <li>Node.js</li>
-                    <li>Three.js / WebGL</li>
-                    <li>PostgreSQL</li>
+                    <li>Node.js / Express</li>
+                    <li>Tailwind CSS</li>
+                    <li>GSAP / GSAP</li>
                   </ul>
                 </div>
               </div>

@@ -52,7 +52,7 @@ export default function Contact() {
                   <input 
                     type="text" 
                     className="w-full bg-transparent border-b border-foreground/10 py-3 focus:outline-none focus:border-accent transition-colors font-light"
-                    placeholder="Dhruv"
+                    placeholder="Enter your name"
                   />
                 </div>
                 <div className="space-y-2">
@@ -60,7 +60,7 @@ export default function Contact() {
                   <input 
                     type="email" 
                     className="w-full bg-transparent border-b border-foreground/10 py-3 focus:outline-none focus:border-accent transition-colors font-light"
-                    placeholder="dhruv@example.com"
+                    placeholder="Email address"
                   />
                 </div>
               </div>
@@ -69,7 +69,7 @@ export default function Contact() {
                 <textarea 
                   rows={4} 
                   className="w-full bg-transparent border-b border-foreground/10 py-3 focus:outline-none focus:border-accent transition-colors font-light resize-none"
-                  placeholder="Tell me about your project..."
+                  placeholder="Share some details about your project"
                 />
               </div>
               <div className="pt-4">

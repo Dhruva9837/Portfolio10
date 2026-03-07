@@ -4,34 +4,26 @@ import { ExternalLink, Github } from 'lucide-react';
 const PROJECTS = [
   {
     id: 1,
-    title: 'Nebula Dashboard',
-    category: 'Full-Stack App',
-    description: 'Enterprise analytics with real-time streaming and AI insights.',
-    tags: ['Next.js', 'PostgreSQL', 'D3.js'],
+    title: 'Modern Portfolio',
+    category: 'Interactive Web',
+    description: 'A high-end developer portfolio with smooth animations and interactive components.',
+    tags: ['React', 'GSAP', 'Framer Motion'],
     link: '#',
   },
   {
     id: 2,
-    title: 'VoidScape',
-    category: 'WebGL Experience',
-    description: 'Immersive interactive environment built with Three.js.',
-    tags: ['Three.js', 'GLSL', 'GSAP'],
+    title: 'E-Commerce Platform',
+    category: 'Full-Stack',
+    description: 'MERN stack application for modern retail experiences.',
+    tags: ['MongoDB', 'Express', 'React', 'Node'],
     link: '#',
   },
   {
     id: 3,
-    title: 'Syntho CMS',
-    category: 'SaaS Platform',
-    description: 'Headless CMS platform with specialized block editor and GraphQL.',
-    tags: ['GraphQL', 'MongoDB', 'TS'],
-    link: '#',
-  },
-  {
-    id: 4,
-    title: 'Pulse Finance',
-    category: 'Fintech App',
-    description: 'Personal finance tracker with spending predictions and alerts.',
-    tags: ['React', 'Python', 'ML'],
+    title: 'Visual Logic',
+    category: 'Creative Design',
+    description: 'Experimenting with interactive UI and motion design patterns.',
+    tags: ['Tailwind', 'Motion', 'Vite'],
     link: '#',
   },
 ];
@@ -58,12 +50,11 @@ export default function Projects() {
               <a href={project.link} data-cursor="hover" className="block cursor-none">
                 <div className="aspect-[16/10] bg-muted/5 border border-foreground/5 rounded-2xl mb-8 overflow-hidden relative">
                   <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                  <div className="absolute inset-0 flex items-center justify-center font-display text-muted/20 text-6xl group-hover:scale-110 transition-transform duration-700 ease-out">
-                    Project {i + 1}
+                  <div className="absolute inset-0 flex items-center justify-center font-display text-muted/5 text-4xl group-hover:scale-105 transition-transform duration-700 ease-out">
+                    {project.title}
                   </div>
                   
-                  {/* Subtle border glow on hover */}
-                  <div className="absolute inset-0 border border-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
+                  <div className="absolute inset-0 border border-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
                 </div>
                 
                 <div className="flex justify-between items-start">

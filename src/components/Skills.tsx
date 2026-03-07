@@ -7,7 +7,7 @@ const SKILLS = [
   },
   {
     category: 'Creative',
-    items: ['Three.js', 'Framer Motion', 'WebGL / GLSL', 'GSAP', 'Figma']
+    items: ['Three.js', 'Framer Motion', 'Git', 'Github', 'GSAP']
   }
 ];
 
