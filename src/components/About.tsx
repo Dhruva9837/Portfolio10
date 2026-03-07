@@ -47,12 +47,12 @@ export default function About() {
                 <div>
                   <h3 className="font-display text-sm font-medium tracking-tight mb-4 uppercase">Technologies</h3>
                   <ul className="grid grid-cols-2 gap-y-2 font-mono text-[11px] text-accent/80 tracking-wider">
-                    <li>React / Vite</li>
+                    <li>React / Next</li>
                     <li>TypeScript</li>
                     <li>Framer Motion</li>
                     <li>Node.js / Express</li>
                     <li>Tailwind CSS</li>
-                    <li>GSAP / GSAP</li>
+                    <li>GSAP</li>
                   </ul>
                 </div>
               </div>
