@@ -45,12 +45,22 @@ export default function Contact() {
           </div>
 
           <div className="flex flex-col justify-end">
-            <form className="space-y-8">
+            <form 
+              action="https://api.web3forms.com/submit" 
+              method="POST"
+              className="space-y-8"
+            >
+              <input type="hidden" name="access_key" value="ded562f3-7a63-4631-83de-435995e7f7f3" />
+              <input type="hidden" name="from_name" value="Portfolio Contact" />
+              <input type="hidden" name="subject" value="New Message from Portfolio" />
+
               <div className="grid sm:grid-cols-2 gap-8">
                 <div className="space-y-2">
                   <label className="font-mono text-[9px] tracking-widest uppercase text-muted">Name</label>
                   <input 
                     type="text" 
+                    name="name"
+                    required
                     className="w-full bg-transparent border-b border-foreground/10 py-3 focus:outline-none focus:border-accent transition-colors font-light"
                     placeholder="Enter your name"
                   />
@@ -59,6 +69,8 @@ export default function Contact() {
                   <label className="font-mono text-[9px] tracking-widest uppercase text-muted">Email</label>
                   <input 
                     type="email" 
+                    name="email"
+                    required
                     className="w-full bg-transparent border-b border-foreground/10 py-3 focus:outline-none focus:border-accent transition-colors font-light"
                     placeholder="Email address"
                   />
@@ -67,6 +79,8 @@ export default function Contact() {
               <div className="space-y-2">
                 <label className="font-mono text-[9px] tracking-widest uppercase text-muted">Message</label>
                 <textarea 
+                  name="message"
+                  required
                   rows={4} 
                   className="w-full bg-transparent border-b border-foreground/10 py-3 focus:outline-none focus:border-accent transition-colors font-light resize-none"
                   placeholder="Share some details about your project"

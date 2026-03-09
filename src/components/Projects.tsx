@@ -86,12 +86,16 @@ export default function Projects() {
 
         <div className="mt-32 text-center">
           <a
-            href="https://github.com"
+            href="https://github.com/Dhruva9837"
             target="_blank"
             rel="noopener noreferrer"
             data-cursor="hover"
             className="inline-flex items-center gap-3 font-mono text-[10px] tracking-widest uppercase text-muted hover:text-foreground transition-colors group"
           >
+          
+          
+          
+          
             <Github size={14} />
             View all on GitHub
             <span className="w-4 h-[1px] bg-muted group-hover:bg-foreground group-hover:w-8 transition-all duration-500" />
