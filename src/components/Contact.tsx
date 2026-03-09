@@ -1,4 +1,6 @@
-import { Github, Linkedin, ArrowUpRight } from 'lucide-react';
+import { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Github, Linkedin, ArrowUpRight, CheckCircle2, AlertCircle } from 'lucide-react';
 
 const SOCIALS = [
   { name: 'GitHub', icon: Github, link: 'https://github.com/Dhruva9837' },
@@ -6,6 +8,36 @@ const SOCIALS = [
 ];
 
 export default function Contact() {
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus('sending');
+
+    const formData = new FormData(e.currentTarget);
+    
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setStatus('success');
+        (e.target as HTMLFormElement).reset();
+        // Reset success message after 5 seconds
+        setTimeout(() => setStatus('idle'), 5000);
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      setStatus('error');
+    }
+  };
+
   return (
     <section id="contact" className="py-32 px-6 bg-background">
       <div className="max-w-6xl mx-auto">
@@ -46,8 +78,7 @@ export default function Contact() {
 
           <div className="flex flex-col justify-end">
             <form 
-              action="https://api.web3forms.com/submit" 
-              method="POST"
+              onSubmit={handleSubmit}
               className="space-y-8"
             >
               <input type="hidden" name="access_key" value="ded562f3-7a63-4631-83de-435995e7f7f3" />
@@ -90,11 +121,36 @@ export default function Contact() {
                 <button
                   data-cursor="hover"
                   type="submit"
-                  className="w-full py-5 bg-accent text-white font-medium rounded-full hover:bg-accent-hover transition-all duration-500 overflow-hidden relative group"
+                  disabled={status === 'sending'}
+                  className="w-full py-5 bg-accent text-white font-medium rounded-full hover:bg-accent-hover transition-all duration-500 overflow-hidden relative group disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <span className="relative z-10">Send Message</span>
+                  <span className="relative z-10">
+                    {status === 'sending' ? 'Sending...' : 'Send Message'}
+                  </span>
                   <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                 </button>
+
+                {status === 'success' && (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="mt-4 flex items-center justify-center gap-2 text-green-500 font-mono text-[10px] tracking-widest uppercase"
+                  >
+                    <CheckCircle2 size={14} />
+                    Message sent successfully!
+                  </motion.div>
+                )}
+
+                {status === 'error' && (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    className="mt-4 flex items-center justify-center gap-2 text-red-500 font-mono text-[10px] tracking-widest uppercase"
+                  >
+                    <AlertCircle size={14} />
+                    Something went wrong. Please try again.
+                  </motion.div>
+                )}
               </div>
             </form>
           </div>
