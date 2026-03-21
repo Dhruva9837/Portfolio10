@@ -48,7 +48,7 @@ export default function Hero() {
           </div>
           <div className="overflow-hidden py-2">
             <span className="reveal-text inline-block translate-y-full text-accent underline decoration-1 underline-offset-[12px] px-4">
-              <RandomLetterSwapForward label="MERN DEVELOPER." />
+              <RandomLetterSwapForward label="FULL Stack." />
             </span>
           </div>
         </h1>
