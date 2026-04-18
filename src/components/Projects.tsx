@@ -4,29 +4,34 @@ import { ExternalLink, Github } from 'lucide-react';
 const PROJECTS = [
   {
     id: 1,
-    title: 'Modern Portfolio',
-    category: 'Interactive Web',
-    description: 'A high-end developer portfolio with smooth animations and interactive components.',
-    tags: ['React', 'GSAP', 'Framer Motion'],
-    link: '#',
+    title: 'Nexora',
+    category: 'Real-time Messaging',
+    description: 'A premium real-time chat application featuring end-to-end encryption aesthetics, group management, and seamless file sharing.',
+    tags: ['React', 'Supabase', 'Framer Motion', 'Tailwind'],
+    link: 'https://chat-app-mu-snowy-58.vercel.app/',
+    image: '/projects/nexora.png',
   },
   {
     id: 2,
-    title: 'E-Commerce Platform',
-    category: 'Full-Stack',
-    description: 'MERN stack application for modern retail experiences.',
-    tags: ['MongoDB', 'Express', 'React', 'Node'],
+    title: 'Aether',
+    category: 'AI Knowledge Base',
+    description: 'An intelligent knowledge management system with vector search, automated tagging, and neural graph visualizations.',
+    tags: ['Next.js', 'OpenAI', 'Pinecone', 'Tailwind'],
     link: '#',
+    image: '/projects/aether.png',
   },
   {
     id: 3,
-    title: 'Visual Logic',
-    category: 'Creative Design',
-    description: 'Experimenting with interactive UI and motion design patterns.',
-    tags: ['Tailwind', 'Motion', 'Vite'],
+    title: 'Vertex',
+    category: 'Data Engineering',
+    description: 'Specialized financial dashboard for real-time market analysis and high-frequency data visualization.',
+    tags: ['React', 'D3.js', 'WebSocket', 'TypeScript'],
     link: '#',
+    image: '/projects/vertex.png',
   },
 ];
+
+
 
 export default function Projects() {
   return (
@@ -49,13 +54,22 @@ export default function Projects() {
             >
               <a href={project.link} data-cursor="hover" className="block cursor-none">
                 <div className="aspect-[16/10] bg-muted/5 border border-foreground/5 rounded-2xl mb-8 overflow-hidden relative">
-                  <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-                  <div className="absolute inset-0 flex items-center justify-center font-display text-muted/5 text-4xl group-hover:scale-105 transition-transform duration-700 ease-out">
-                    {project.title}
-                  </div>
+                  {(project as any).image ? (
+                    <img 
+                      src={(project as any).image} 
+                      alt={project.title}
+                      className="absolute inset-0 w-full h-full object-cover grayscale-[0.2] contrast-[1.1] group-hover:scale-110 group-hover:rotate-1 transition-transform duration-1000 ease-out"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center font-display text-muted/5 text-4xl group-hover:scale-105 transition-transform duration-700 ease-out">
+                      {project.title}
+                    </div>
+                  )}
                   
+                  <div className="absolute inset-0 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 mix-blend-overlay" />
                   <div className="absolute inset-0 border border-accent/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
                 </div>
+
                 
                 <div className="flex justify-between items-start">
                   <div>

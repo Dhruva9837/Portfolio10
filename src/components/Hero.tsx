@@ -58,9 +58,12 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
           className="max-w-xl mx-auto text-muted font-light leading-relaxed mb-12"
-          style={{ fontSize: 'clamp(1rem, 1.5vw, 1.25rem)' }}
+          style={{ fontSize: 'clamp(1rem, 1.5vw, 1.1rem)' }}
         >
+          A Full-Stack Developer and Creative technologist focused on building digital experiences 
+          that marry minimalist design with complex technical architecture.
         </motion.p>
+
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
