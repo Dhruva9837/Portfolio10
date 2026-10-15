@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import { FileDown } from 'lucide-react';
+import { FileDown, Search } from 'lucide-react';
 
 const NAV_LINKS = ['About', 'Projects', 'Skills', 'Contact'];
 
@@ -69,6 +69,21 @@ export default function Navbar() {
             ))}
           </ul>
 
+          {/* Command Palette Button */}
+          <button
+            type="button"
+            onClick={() => window.dispatchEvent(new CustomEvent('open-command-palette'))}
+            data-cursor="hover"
+            aria-label="Open Command Palette (Ctrl+K / Cmd+K)"
+            className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-accent/40 text-muted hover:text-white transition-all text-[11px] font-mono group"
+          >
+            <Search size={13} className="text-accent group-hover:scale-110 transition-transform" />
+            <span className="hidden lg:inline text-muted/80">Search</span>
+            <kbd className="px-1.5 py-0.5 rounded bg-white/5 border border-white/10 text-[9px] text-muted group-hover:text-foreground">
+              ⌘K
+            </kbd>
+          </button>
+
           <a
             href="/Dhruv_Kumar_Resume.pdf"
             download="Dhruv_Kumar_Resume.pdf"
@@ -117,6 +132,19 @@ export default function Navbar() {
               {link}
             </button>
           ))}
+
+          <button
+            type="button"
+            onClick={() => {
+              setMenuOpen(false);
+              window.dispatchEvent(new CustomEvent('open-command-palette'));
+            }}
+            data-cursor="hover"
+            className="flex items-center gap-2 text-muted hover:text-accent transition-colors p-2 text-lg font-mono"
+          >
+            <Search size={18} className="text-accent" />
+            <span>Search (⌘K)</span>
+          </button>
 
           <a
             href="/Dhruv_Kumar_Resume.pdf"

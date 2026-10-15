@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { motion } from 'framer-motion';
 import { RandomLetterSwapForward } from '@/components/ui/random-letter-swap';
+import HeroScene from './HeroScene';
 
 export default function Hero() {
   const containerRef = useRef<HTMLElement>(null);
@@ -36,6 +37,9 @@ export default function Hero() {
       aria-label="Introduction & Hero" 
       className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden"
     >
+      {/* Interactive 3D Canvas Scene */}
+      <HeroScene />
+
       <div className="relative z-20 text-center px-6 max-w-5xl mx-auto w-full">
         <div className="mb-8 overflow-hidden">
           <motion.span 

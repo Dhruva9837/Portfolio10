@@ -10,6 +10,8 @@ import Projects from './components/Projects';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import TerminalWidget from './components/TerminalWidget';
+import CommandPalette from './components/CommandPalette';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -64,6 +66,8 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <TerminalWidget />
+      <CommandPalette />
     </div>
   );
 }
