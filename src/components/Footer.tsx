@@ -8,7 +8,7 @@ export default function Footer() {
         </div>
         
         <div className="text-muted font-mono text-[10px] tracking-[0.2em] uppercase">
-          © 2026 Dhruva — Crafted with intentionality
+          © 2027 Dhruva — Crafted with intentionality
         </div>
 
         <div className="flex items-center gap-3">

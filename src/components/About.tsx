@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 export default function About() {
   return (
-    <section id="about" className="py-32 px-6 bg-background">
+    <section id="about" aria-labelledby="about-heading" className="py-32 px-6 bg-background">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-12 gap-16 md:gap-24 items-start">
           <div className="md:col-span-12 lg:col-span-5">
@@ -14,7 +14,7 @@ export default function About() {
               className="mb-8"
             >
               <span className="font-mono text-[10px] tracking-[0.4em] uppercase text-accent mb-4 block">About Me</span>
-              <h2 className="font-display font-medium text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tighter">
+              <h2 id="about-heading" className="font-display font-medium text-4xl md:text-5xl lg:text-6xl leading-[1.1] tracking-tighter">
                 Crafting digital <br />
                 <span className="text-muted">simplicity through</span> <br />
                 design & code.
@@ -37,16 +37,16 @@ export default function About() {
               
               <div className="grid sm:grid-cols-2 gap-12">
                 <div>
-                  <h3 className="font-display text-sm font-medium tracking-tight mb-4 uppercase">My Approach</h3>
-                  <p className="text-sm text-muted/80 leading-relaxed font-light">
+                  <h3 className="font-display text-sm font-medium tracking-tight mb-4 uppercase text-foreground">My Approach</h3>
+                  <p className="text-sm text-muted/90 leading-relaxed font-light">
                     I believe the best interfaces are the ones that disappear. 
                     I focus on performance, accessibility, and smooth 
                     micro-interactions to ensure every movement feels intentional.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-display text-sm font-medium tracking-tight mb-4 uppercase">Technologies</h3>
-                  <ul className="grid grid-cols-2 gap-y-2 font-mono text-[11px] text-accent/80 tracking-wider">
+                  <h3 className="font-display text-sm font-medium tracking-tight mb-4 uppercase text-foreground">Technologies</h3>
+                  <ul className="grid grid-cols-2 gap-y-2 font-mono text-[11px] text-accent tracking-wider" aria-label="Key technologies list">
                     <li>React / Next</li>
                     <li>TypeScript</li>
                     <li>Framer Motion</li>
@@ -58,13 +58,18 @@ export default function About() {
               </div>
 
               <div className="mt-16 pt-8 border-t border-foreground/5">
-                <button
+                <a
+                  href="/Dhruv_Kumar_Resume.pdf"
+                  download="Dhruv_Kumar_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   data-cursor="hover"
-                  className="font-mono text-[11px] tracking-widest uppercase text-foreground hover:text-accent transition-colors flex items-center gap-4 group"
+                  aria-label="Download Dhruv Kumar CV (PDF, 1 page)"
+                  className="font-mono text-[11px] tracking-widest uppercase text-foreground hover:text-accent transition-colors inline-flex items-center gap-4 group focus-visible:ring-2 focus-visible:ring-accent rounded-sm p-1"
                 >
                   Download CV 
-                  <span className="w-8 h-[1px] bg-accent group-hover:w-12 transition-all duration-500" />
-                </button>
+                  <span className="w-8 h-[1px] bg-accent group-hover:w-12 transition-all duration-500" aria-hidden="true" />
+                </a>
               </div>
             </motion.div>
           </div>
@@ -73,4 +78,3 @@ export default function About() {
     </section>
   );
 }
-

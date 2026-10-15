@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dhruv Kumar - Resume</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 14mm 18mm 12mm 18mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #111827;
+      background: #ffffff;
+      line-height: 1.35;
+      font-size: 9.5pt;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+    }
+    .name {
+      font-size: 20pt;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: #1e3a8a;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+    .location {
+      font-size: 9.5pt;
+      color: #374151;
+      margin-bottom: 4px;
+    }
+    .contact-links {
+      font-size: 9pt;
+      color: #4b5563;
+    }
+    .contact-links a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+    .contact-links a:hover {
+      text-decoration: underline;
+    }
+    .separator {
+      margin: 0 5px;
+      color: #9ca3af;
+    }
+    .section {
+      margin-bottom: 11px;
+    }
+    .section-title {
+      font-size: 10pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #1e3a8a;
+      border-bottom: 1.5px solid #1e3a8a;
+      padding-bottom: 2px;
+      margin-bottom: 6px;
+    }
+    p.summary {
+      text-align: justify;
+      color: #374151;
+      font-size: 9.2pt;
+      line-height: 1.4;
+    }
+    .skills-grid {
+      display: table;
+      width: 100%;
+      font-size: 9pt;
+    }
+    .skill-row {
+      display: table-row;
+    }
+    .skill-label {
+      display: table-cell;
+      font-weight: 700;
+      color: #111827;
+      width: 195px;
+      padding: 1.5px 0;
+    }
+    .skill-val {
+      display: table-cell;
+      color: #374151;
+      padding: 1.5px 0;
+    }
+    .project-item {
+      margin-bottom: 8px;
+    }
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+    }
+    .project-title {
+      font-weight: 700;
+      font-size: 9.5pt;
+      color: #111827;
+    }
+    .project-links a {
+      color: #2563eb;
+      font-size: 8.5pt;
+      text-decoration: none;
+      margin-left: 6px;
+    }
+    .project-tech {
+      font-size: 8.5pt;
+      font-style: italic;
+      color: #4b5563;
+      margin-bottom: 3px;
+    }
+    ul.bullet-list {
+      margin-left: 16px;
+      color: #374151;
+    }
+    ul.bullet-list li {
+      margin-bottom: 2px;
+      font-size: 9pt;
+      line-height: 1.35;
+    }
+    .edu-item {
+      margin-bottom: 5px;
+    }
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .edu-degree {
+      font-weight: 700;
+      color: #111827;
+      font-size: 9.2pt;
+    }
+    .edu-year {
+      color: #4b5563;
+      font-size: 8.8pt;
+    }
+    .edu-school {
+      color: #4b5563;
+      font-size: 8.8pt;
+    }
+    .soft-skills {
+      font-size: 9pt;
+      color: #374151;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="name">DHRUV KUMAR</h1>
+    <div class="location">Saharanpur, Uttar Pradesh</div>
+    <div class="contact-links">
+      <span>8859712153</span>
+      <span class="separator">|</span>
+      <a href="mailto:kumardhruva187@gmail.com">kumardhruva187@gmail.com</a>
+      <span class="separator">|</span>
+      <a href="https://github.com/Dhruva9837" target="_blank">GitHub</a>
+      <span class="separator">|</span>
+      <a href="https://www.linkedin.com/in/dhruva-kumar-715479301" target="_blank">LinkedIn</a>
+      <span class="separator">|</span>
+      <a href="https://dhruvakumar.dev" target="_blank">Portfolio</a>
+    </div>
+  </header>
+
+  <section class="section">
+    <h2 class="section-title">Summary</h2>
+    <p class="summary">
+      Full Stack Developer with hands-on experience building web applications using React, Next.js, Node.js, Express.js, MongoDB and Supabase. Experienced in developing REST APIs, authentication systems, real-time applications and responsive user interfaces.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-row">
+        <div class="skill-label">Languages:</div>
+        <div class="skill-val">JavaScript (ES6+), TypeScript</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label">Frontend:</div>
+        <div class="skill-val">React.js, Next.js, Tailwind CSS, HTML, CSS</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label">Backend:</div>
+        <div class="skill-val">Node.js, Express.js, REST APIs</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label">Database:</div>
+        <div class="skill-val">MongoDB, Mongoose, Supabase</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label">Authentication & Security:</div>
+        <div class="skill-val">JWT, RBAC, Authorization</div>
+      </div>
+      <div class="skill-row">
+        <div class="skill-label">Tools & Deployment:</div>
+        <div class="skill-val">Git, GitHub, GitHub Actions, Vercel, Render</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="project-item">
+      <div class="project-header">
+        <div class="project-title">Pahel LMS <span style="font-weight: 400; color: #4b5563;">| Full Stack Developer | Client Project</span></div>
+      </div>
+      <div class="project-tech">React.js | Node.js | Express.js | MongoDB | Tailwind CSS</div>
+      <ul class="bullet-list">
+        <li>Developed a full-stack microfinance loan management system for managing clients, loans, EMI schedules, collections and repayments.</li>
+        <li>Implemented JWT authentication and role-based access control for secure multi-user access.</li>
+        <li>Developed REST APIs using Node.js and Express.js with MongoDB for client, loan and repayment management.</li>
+        <li>Implemented loan calculations, EMI scheduling, dashboards and reporting functionality.</li>
+      </ul>
+    </div>
+
+    <div class="project-item" style="margin-bottom: 0;">
+      <div class="project-header">
+        <div class="project-title">Nexora <span style="font-weight: 400; color: #4b5563;">| Real Time Chat Application</span></div>
+        <div class="project-links">
+          <a href="https://chat-app-mu-snowy-58.vercel.app/" target="_blank">Live Demo</a>
+          <span class="separator">|</span>
+          <a href="https://github.com/Dhruva9837" target="_blank">GitHub</a>
+        </div>
+      </div>
+      <div class="project-tech">Next.js | TypeScript | Supabase | Tailwind CSS | Zustand</div>
+      <ul class="bullet-list">
+        <li>Developed a real-time chat application supporting one-to-one and group messaging using Supabase Realtime.</li>
+        <li>Implemented authentication, user profiles, friend management and responsive chat interfaces.</li>
+        <li>Architected the frontend with Next.js and Tailwind CSS, managing client-side state with Zustand.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Education</h2>
+    <div class="edu-item">
+      <div class="edu-header">
+        <div class="edu-degree">Bachelor of Technology in Computer Science</div>
+        <div class="edu-year">2023 to 2027</div>
+      </div>
+      <div class="edu-school">Shobhit University</div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-header">
+        <div class="edu-degree">Intermediate</div>
+        <div class="edu-year">2022</div>
+      </div>
+      <div class="edu-school">Ram Krishn Mehta Inter College</div>
+    </div>
+    <div class="edu-item" style="margin-bottom: 0;">
+      <div class="edu-header">
+        <div class="edu-degree">High School</div>
+        <div class="edu-year">2020</div>
+      </div>
+      <div class="edu-school">Ram Krishn Mehta Inter College</div>
+    </div>
+  </section>
+
+  <section class="section" style="margin-bottom: 0;">
+    <h2 class="section-title">Soft Skills</h2>
+    <div class="soft-skills">
+      Problem-Solving, Communication, Teamwork, Collaboration, Adaptability
+    </div>
+  </section>
+
+</body>
+</html>

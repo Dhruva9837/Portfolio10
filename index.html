@@ -3,19 +3,234 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhruva Kumar · Creative Developer &amp; Full Stack Technologist</title>
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Dhruva Kumar · Creative Developer &amp; Full Stack Technologist" />
   <meta name="description"
-    content="Dhruva Kumar – Creative Developer & Web Engineer crafting immersive digital experiences with React, Node.js, and GSAP." />
-  <meta property="og:title" content="Dhruva Kumar · Creative Developer" />
-  <meta property="og:description"
-    content="Crafting digital experiences at the intersection of engineering and visual storytelling." />
+    content="Dhruva Kumar – Creative Developer &amp; Full Stack Technologist crafting immersive digital experiences with React, Next.js, Node.js, Three.js, and GSAP." />
+  <meta name="keywords" content="Dhruva Kumar, Creative Developer, Full Stack Developer, React, Next.js, Three.js, GSAP, WebGL, Portfolio, Frontend Engineer" />
+  <meta name="author" content="Dhruva Kumar" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
   <meta name="theme-color" content="#030308" />
-  <title> D H R U V A </title>
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://dhruvakumar.dev/" />
+
+  <!-- Font Preconnect & Preload (Eliminating Render-Blocking @import) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  </noscript>
+
+  <!-- Favicon & Touch Icons -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="apple-touch-icon" href="/og-image.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+
+  <!-- Open Graph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://dhruvakumar.dev/" />
+  <meta property="og:title" content="Dhruva Kumar · Creative Developer &amp; Full Stack Technologist" />
+  <meta property="og:description"
+    content="Crafting immersive digital experiences at the intersection of minimal aesthetic design and complex technical architecture." />
+  <meta property="og:image" content="https://dhruvakumar.dev/og-image.jpg" />
+  <meta property="og:image:secure_url" content="https://dhruvakumar.dev/og-image.jpg" />
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Dhruva Kumar — Creative Developer &amp; Full Stack Technologist" />
+  <meta property="og:site_name" content="Dhruva Kumar Portfolio" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter / X Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://dhruvakumar.dev/" />
+  <meta name="twitter:title" content="Dhruva Kumar · Creative Developer &amp; Full Stack Technologist" />
+  <meta name="twitter:description"
+    content="Crafting immersive digital experiences at the intersection of minimal aesthetic design and complex technical architecture." />
+  <meta name="twitter:image" content="https://dhruvakumar.dev/og-image.jpg" />
+  <meta name="twitter:image:alt" content="Dhruva Kumar Portfolio Preview" />
+
+  <!-- Structured Data: Person JSON-LD (Schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://dhruvakumar.dev/#person",
+    "name": "Dhruva Kumar",
+    "alternateName": ["Dhruva", "D H R U V A"],
+    "url": "https://dhruvakumar.dev",
+    "image": "https://dhruvakumar.dev/og-image.jpg",
+    "jobTitle": "Creative Developer & Full Stack Engineer",
+    "description": "A Full-Stack Developer and Creative technologist focused on building digital experiences that marry minimalist design with complex technical architecture.",
+    "email": "mailto:kumardhruva187@gmail.com",
+    "sameAs": [
+      "https://github.com/Dhruva9837",
+      "https://www.linkedin.com/in/dhruva-kumar-715479301"
+    ],
+    "knowsAbout": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "Three.js",
+      "GSAP",
+      "Tailwind CSS",
+      "WebGL",
+      "Full Stack Development",
+      "Creative Engineering"
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: WebSite JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://dhruvakumar.dev/#website",
+    "url": "https://dhruvakumar.dev",
+    "name": "Dhruva Kumar Portfolio",
+    "description": "Official portfolio of Dhruva Kumar, Creative Developer and Full Stack Technologist.",
+    "author": {
+      "@id": "https://dhruvakumar.dev/#person"
+    }
+  }
+  </script>
 </head>
 
-<body>
-  <div id="root"></div>
+<body class="bg-[#030308] text-[#f4f4f5]">
+  <!--
+    Static Pre-rendered Semantic Shell for Web Crawlers, Bots, and Link Previews:
+    Ensures search engines (Googlebot, Bingbot, etc.) and preview crawlers (WhatsApp, Telegram, Slack, etc.)
+    index complete textual content even without JavaScript execution.
+    When JavaScript loads, React mounts seamlessly into #root.
+  -->
+  <div id="root">
+    <header style="padding: 2rem; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center;">
+      <a href="#hero" style="font-size: 1.25rem; font-weight: 700; text-decoration: none; color: inherit; letter-spacing: 0.1em;">D H R U V A.</a>
+      <nav aria-label="Main Navigation">
+        <ul style="display: flex; gap: 1.5rem; list-style: none; margin: 0; padding: 0; align-items: center;">
+          <li><a href="#about" style="color: #a1a1aa; text-decoration: none; font-size: 0.85rem; text-transform: uppercase;">About</a></li>
+          <li><a href="#projects" style="color: #a1a1aa; text-decoration: none; font-size: 0.85rem; text-transform: uppercase;">Projects</a></li>
+          <li><a href="#skills" style="color: #a1a1aa; text-decoration: none; font-size: 0.85rem; text-transform: uppercase;">Skills</a></li>
+          <li><a href="#contact" style="color: #a1a1aa; text-decoration: none; font-size: 0.85rem; text-transform: uppercase;">Contact</a></li>
+          <li><a href="/Dhruv_Kumar_Resume.pdf" download="Dhruv_Kumar_Resume.pdf" style="color: #818cf8; border: 1px solid rgba(129, 140, 248, 0.4); padding: 0.25rem 0.75rem; border-radius: 9999px; text-decoration: none; font-size: 0.8rem; text-transform: uppercase;">Resume</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main style="max-width: 1200px; margin: 0 auto; padding: 0 1.5rem;">
+      <!-- Hero Section -->
+      <section id="hero" style="min-height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+        <p style="font-family: monospace; font-size: 0.75rem; letter-spacing: 0.3em; color: #a1a1aa; text-transform: uppercase;">Available for Work · 2027</p>
+        <h1 style="font-size: 3.5rem; line-height: 1.1; margin: 1.5rem 0;">
+          D H R U V A <br />
+          <span style="color: #818cf8;">FULL STACK.</span>
+        </h1>
+        <p style="max-width: 600px; color: #a1a1aa; font-size: 1.1rem; line-height: 1.6;">
+          A Full-Stack Developer and Creative technologist focused on building digital experiences that marry minimalist design with complex technical architecture.
+        </p>
+        <p style="margin-top: 2rem;">
+          <a href="#projects" style="display: inline-block; padding: 0.75rem 2rem; background: #6366f1; color: #ffffff; border-radius: 9999px; text-decoration: none; font-weight: 500;">View Work</a>
+        </p>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" style="padding: 5rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+        <p style="font-family: monospace; font-size: 0.75rem; letter-spacing: 0.3em; color: #818cf8; text-transform: uppercase;">About Me</p>
+        <h2 style="font-size: 2.5rem; line-height: 1.2; margin: 1rem 0;">Crafting digital simplicity through design &amp; code.</h2>
+        <p style="font-size: 1.15rem; color: #a1a1aa; line-height: 1.7; max-width: 800px;">
+          I'm a full-stack creative developer. My philosophy is rooted in functional minimalism — creating experiences that feel effortless yet deliver meaningful impact.
+        </p>
+        <div style="margin-top: 2rem;">
+          <h3 style="font-size: 1rem; text-transform: uppercase; letter-spacing: 0.1em;">Technologies</h3>
+          <p style="color: #818cf8; font-family: monospace; font-size: 0.9rem;">
+            React / Next.js · TypeScript · Framer Motion · Node.js / Express · Tailwind CSS · GSAP · Three.js
+          </p>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" style="padding: 5rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+        <p style="font-family: monospace; font-size: 0.75rem; letter-spacing: 0.3em; color: #818cf8; text-transform: uppercase;">Selected Projects</p>
+        <h2 style="font-size: 2.5rem; margin: 1rem 0;">Featured Work.</h2>
+        
+        <article style="margin: 2.5rem 0;">
+          <h3 style="font-size: 1.5rem; margin: 0.5rem 0;">Nexora — Real-time Messaging</h3>
+          <p style="color: #a1a1aa; line-height: 1.6;">
+            A premium real-time chat application featuring end-to-end encryption aesthetics, group management, and seamless file sharing.
+          </p>
+          <p style="font-family: monospace; font-size: 0.8rem; color: #818cf8;">React · Supabase · Framer Motion · Tailwind</p>
+          <a href="https://chat-app-mu-snowy-58.vercel.app/" target="_blank" rel="noopener noreferrer" style="color: #818cf8;">Live Preview &rarr;</a>
+        </article>
+
+        <article style="margin: 2.5rem 0;">
+          <h3 style="font-size: 1.5rem; margin: 0.5rem 0;">Aether — AI Knowledge Base</h3>
+          <p style="color: #a1a1aa; line-height: 1.6;">
+            An intelligent knowledge management system with vector search, automated tagging, and neural graph visualizations.
+          </p>
+          <p style="font-family: monospace; font-size: 0.8rem; color: #818cf8;">Next.js · OpenAI · Pinecone · Tailwind</p>
+        </article>
+
+        <article style="margin: 2.5rem 0;">
+          <h3 style="font-size: 1.5rem; margin: 0.5rem 0;">Vertex — Data Engineering</h3>
+          <p style="color: #a1a1aa; line-height: 1.6;">
+            Specialized financial dashboard for real-time market analysis and high-frequency data visualization.
+          </p>
+          <p style="font-family: monospace; font-size: 0.8rem; color: #818cf8;">React · D3.js · WebSocket · TypeScript</p>
+        </article>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" style="padding: 5rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+        <p style="font-family: monospace; font-size: 0.75rem; letter-spacing: 0.3em; color: #818cf8; text-transform: uppercase;">Expertise</p>
+        <h2 style="font-size: 2.5rem; margin: 1rem 0;">My Toolkit.</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
+          <div>
+            <h3 style="font-size: 1rem; color: #818cf8; text-transform: uppercase;">Frontend</h3>
+            <p style="font-size: 0.95rem; line-height: 1.6; color: #d4d4d8;">React.js, Next.js, TypeScript, Tailwind CSS, JavaScript (ES6+), Framer Motion</p>
+          </div>
+          <div>
+            <h3 style="font-size: 1rem; color: #a78bfa; text-transform: uppercase;">Backend</h3>
+            <p style="font-size: 0.95rem; line-height: 1.6; color: #d4d4d8;">Node.js, Express.js, RESTful APIs, JWT &amp; RBAC Auth, GraphQL</p>
+          </div>
+          <div>
+            <h3 style="font-size: 1rem; color: #60a5fa; text-transform: uppercase;">Database</h3>
+            <p style="font-size: 0.95rem; line-height: 1.6; color: #d4d4d8;">MongoDB, Mongoose ODM, Supabase, PostgreSQL</p>
+          </div>
+          <div>
+            <h3 style="font-size: 1rem; color: #34d399; text-transform: uppercase;">DevOps</h3>
+            <p style="font-size: 0.95rem; line-height: 1.6; color: #d4d4d8;">Git &amp; GitHub, GitHub Actions (CI/CD), Vercel, Render &amp; Cloud</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" style="padding: 5rem 0; border-top: 1px solid rgba(255,255,255,0.05);">
+        <p style="font-family: monospace; font-size: 0.75rem; letter-spacing: 0.3em; color: #818cf8; text-transform: uppercase;">Contact</p>
+        <h2 style="font-size: 2.5rem; margin: 1rem 0;">Let's build something great.</h2>
+        <p style="color: #a1a1aa; font-size: 1.1rem;">
+          Email: <a href="mailto:kumardhruva187@gmail.com" style="color: #818cf8; text-decoration: none;">kumardhruva187@gmail.com</a>
+        </p>
+        <p style="margin-top: 1rem;">
+          <a href="https://github.com/Dhruva9837" target="_blank" rel="noopener noreferrer" style="color: #818cf8; margin-right: 1.5rem;">GitHub &rarr;</a>
+          <a href="https://www.linkedin.com/in/dhruva-kumar-715479301" target="_blank" rel="noopener noreferrer" style="color: #818cf8;">LinkedIn &rarr;</a>
+        </p>
+      </section>
+    </main>
+
+    <footer style="padding: 3rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.05); text-align: center; font-family: monospace; font-size: 0.8rem; color: #71717a;">
+      &copy; 2027 Dhruva — Crafted with intentionality · Systems Active
+    </footer>
+  </div>
+
   <script type="module" src="/src/main.tsx"></script>
 </body>
 

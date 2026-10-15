@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dhruva9837.github.io/Portfolio10/sitemap.xml
+Sitemap: https://dhruvakumar.dev/sitemap.xml

@@ -8,13 +8,20 @@ export default function Hero() {
   const headlineRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({ delay: 0.5 });
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (prefersReducedMotion) {
+      gsap.set('.reveal-text', { y: 0 });
+      return;
+    }
+
+    const tl = gsap.timeline({ delay: 0.3 });
     
     tl.to('.reveal-text', {
       y: 0,
-      duration: 1,
-      ease: 'power4.out',
-      stagger: 0.1
+      duration: 0.9,
+      ease: 'power3.out',
+      stagger: 0.08
     });
 
     return () => {
@@ -23,16 +30,21 @@ export default function Hero() {
   }, []);
 
   return (
-    <section ref={containerRef} id="hero" className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden">
+    <section 
+      ref={containerRef} 
+      id="hero" 
+      aria-label="Introduction & Hero" 
+      className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden"
+    >
       <div className="relative z-20 text-center px-6 max-w-5xl mx-auto w-full">
         <div className="mb-8 overflow-hidden">
           <motion.span 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="font-mono text-[10px] tracking-[0.5em] text-muted uppercase"
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="font-mono text-xs tracking-[0.4em] text-muted uppercase inline-block"
           >
-            Available for Work · 2026
+            Available for Work · 2027
           </motion.span>
         </div>
 
@@ -54,44 +66,47 @@ export default function Hero() {
         </h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
+          transition={{ duration: 0.7, delay: 0.8 }}
           className="max-w-xl mx-auto text-muted font-light leading-relaxed mb-12"
-          style={{ fontSize: 'clamp(1rem, 1.5vw, 1.1rem)' }}
+          style={{ fontSize: 'clamp(1rem, 1.5vw, 1.15rem)' }}
         >
           A Full-Stack Developer and Creative technologist focused on building digital experiences 
           that marry minimalist design with complex technical architecture.
         </motion.p>
 
-
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.4 }}
+          transition={{ duration: 0.7, delay: 1 }}
         >
           <button
             data-cursor="hover"
             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
-            className="magnetic-btn group relative px-10 py-4 bg-accent hover:bg-accent-hover text-white transition-all duration-500 rounded-full overflow-hidden"
+            aria-label="Scroll to view selected projects"
+            className="magnetic-btn group relative px-10 py-4 bg-accent hover:bg-accent-hover text-white transition-all duration-300 rounded-full overflow-hidden focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-background focus-visible:outline-none"
           >
             <span className="relative z-10 font-medium tracking-tight">View Work</span>
           </button>
         </motion.div>
       </div>
 
-      {/* Subtle background element */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
+      {/* GPU-efficient background element */}
+      <div 
+        aria-hidden="true" 
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] md:w-[600px] h-[350px] md:h-[600px] bg-accent/5 rounded-full blur-[60px] md:blur-[120px] pointer-events-none will-change-transform" 
+      />
       
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 overflow-hidden">
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 overflow-hidden" aria-hidden="true">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 2, duration: 1 }}
+          transition={{ delay: 1.5, duration: 0.8 }}
           className="flex flex-col items-center gap-4"
         >
-          <span className="font-mono text-[9px] tracking-[0.3em] uppercase text-muted/50">Scroll</span>
-          <div className="w-px h-12 bg-muted/20 relative">
+          <span className="font-mono text-[10px] tracking-[0.3em] uppercase text-muted">Scroll</span>
+          <div className="w-px h-12 bg-muted/30 relative">
             <motion.div 
               animate={{ y: [0, 48, 0] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -103,4 +118,3 @@ export default function Hero() {
     </section>
   );
 }
-
