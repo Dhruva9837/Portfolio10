@@ -14,10 +14,12 @@ import {
   Cpu
 } from 'lucide-react';
 
+import React from 'react';
+
 interface SkillItem {
   name: string;
   level?: string;
-  icon: (props: { className?: string }) => React.JSX.Element;
+  icon: React.ComponentType<{ className?: string }>;
 }
 
 interface SkillCategory {
